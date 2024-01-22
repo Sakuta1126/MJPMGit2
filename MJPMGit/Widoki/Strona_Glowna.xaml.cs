@@ -38,6 +38,7 @@ namespace MJPMGit.Widoki
             {
                 Odtwarzacz strona = new Odtwarzacz(wideo);
                 strona.ShowDialog();
+                Odswiez();
             }
             else
             {
@@ -58,6 +59,7 @@ namespace MJPMGit.Widoki
             {
                 App.baza.Usun(wideo);
                 MessageBox.Show("Usunięto "+wideo.Nazwa +"!");
+                Odswiez();
             }
             else
             {

@@ -49,6 +49,7 @@ namespace MJPMGit.Widoki
                 Wideo wideo = new Wideo(nazwa.Text,opis.Text,nazwaPliku);
                 App.baza.Zapisz(wideo);
                 System.Windows.MessageBox.Show("Dodano " + wideo.Nazwa + "!");
+                this.Close();
             }
             else
             {
