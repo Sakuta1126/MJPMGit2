@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MJPMGit.Widoki"
         mc:Ignorable="d"
-        Title="Strona_Glowna" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Strona_Glowna" Height="450" Width="800" ResizeMode="CanResize" WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Width="200" Height="40" Background="Green" BorderBrush="Green" Foreground="White" Content="Odtwórz" FontSize="15" FontWeight="Bold" Margin="5" ></Button>
+            <Button Width="200" Height="40" Background="Blue" BorderBrush="Blue" Foreground="White" Content="Dodaj" FontSize="15" FontWeight="Bold" Margin="5" ></Button>
+            <Button Width="200" Height="40" Background="red" BorderBrush="Red" Foreground="White" Content="Usuń" FontSize="15" FontWeight="Bold" Margin="5" ></Button>
+        </StackPanel>
+        <ListView x:Name="listaWideo">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Nazwa" DisplayMemberBinding="{Binding Nazwa}"></GridViewColumn>
+                        <GridViewColumn Header="Opis" DisplayMemberBinding="{Binding Opis}"></GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
 </Window>
