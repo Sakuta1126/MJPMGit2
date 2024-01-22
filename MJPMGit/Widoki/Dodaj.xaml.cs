@@ -37,7 +37,7 @@ namespace MJPMGit.Widoki
                 string sciezkaDoPliku = okno.FileName;
                 nazwaPliku = System.IO.Path.GetFileName(sciezkaDoPliku);
                 string sciezkaZasobow = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Pliki") + "/"+nazwaPliku;
-                System.IO.File.Move(sciezkaZasobow, sciezkaDoPliku);
+                System.IO.File.Move(sciezkaDoPliku, sciezkaZasobow);
                 wczytajTxt.Content = "Wczytano plik: TAK";
             }
         }
