@@ -16,7 +16,7 @@
             <Button x:Name="stop" Content="Stop" Height="30" Width="200" Background="DarkKhaki" Click="stop_Click"></Button>
             <Label></Label>
             <Button x:Name="od_nowa" Content="Od nowa" Height="30" Width="200" Background="LightYellow" Click="od_nowa_Click"></Button>
-            <Label></Label>
+         
            
         </StackPanel>
         <Label></Label>
