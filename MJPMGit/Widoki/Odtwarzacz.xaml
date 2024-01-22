@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MJPMGit.Widoki"
         mc:Ignorable="d"
-        Title="Odtwarzacz" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Odtwarzacz" Height="600" Width="1000" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <MediaElement x:Name="element_wideo" Height="400" Width="800"></MediaElement>
+        <Label></Label>
+        <Label></Label>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="start" Content="Start" Height="30" Width="200" Background="BlanchedAlmond" Click="start_Click"></Button>
+            <Label></Label>
+            <Button x:Name="stop" Content="Stop" Height="30" Width="200" Background="DarkKhaki" Click="stop_Click"></Button>
+            <Label></Label>
+            <Button x:Name="od_nowa" Content="Od nowa" Height="30" Width="200" Background="LightYellow" Click="od_nowa_Click"></Button>
+         
+           
+        </StackPanel>
+        <Label></Label>
+        <Label Content="Obsluga Dzwieku" FontSize="20" HorizontalAlignment="Center"></Label>
+        <Label></Label>
+        <Slider x:Name="dzwiek" Height="30" Width="200" Minimum="0" Maximum="100" Value="0" ValueChanged="dzwiek_ValueChanged" ></Slider>
+    </StackPanel>
 </Window>
