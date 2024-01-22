@@ -60,7 +60,7 @@ namespace MJPMGit.Widoki
         private void dzwiek_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             urzadzenie.AudioEndpointVolume.MasterVolumeLevelScalar = (float)dzwiek.Value / 100;
-
+            procent.Content = Math.Round(dzwiek.Value) + "%";
         }
     }
 }
