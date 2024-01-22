@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MJPMGit.Widoki;
+using MJPMGit.Widoki.Klasy;
 
 namespace MJPMGit.Widoki
 {
@@ -22,6 +24,45 @@ namespace MJPMGit.Widoki
         public Strona_Glowna()
         {
             InitializeComponent();
+            Odswiez();
+        }
+        public void Odswiez()
+        {
+            listaWideo.ItemsSource = App.baza.Pobierz<Wideo>();
+        }
+
+        private void Odtworz_Click(object sender, RoutedEventArgs e)
+        {
+            Wideo wideo = listaWideo.SelectedItem as Wideo;
+            if(wideo != null)
+            {
+                Odtwarzacz strona = new Odtwarzacz(wideo);
+                strona.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Zaznacz element na liście!");
+            }
+        }
+
+        private void Dodaj_Click(object sender, RoutedEventArgs e)
+        {
+            Dodaj strona = new Dodaj();
+            strona.ShowDialog();
+        }
+
+        private void Usun_Click(object sender, RoutedEventArgs e)
+        {
+            Wideo wideo = listaWideo.SelectedItem as Wideo;
+            if (wideo != null)
+            {
+                App.baza.Usun(wideo);
+                MessageBox.Show("Usunięto "+wideo.Nazwa +"!");
+            }
+            else
+            {
+                MessageBox.Show("Zaznacz element na liście!");
+            }
         }
     }
 }

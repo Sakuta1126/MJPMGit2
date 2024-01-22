@@ -12,8 +12,8 @@
         <Label Content="Podaj opis:"></Label>
         <TextBox Width="200" x:Name="opis"></TextBox>
         <Label></Label>
-        <Button Width="100" Height="100" Content="Wczytaj plik" BorderBrush="Black" Background="White" Foreground="Black" FontWeight="Bold"></Button>
-        <Label HorizontalAlignment="Center" Content="Wczytano plik: NIE"></Label>
-        <Button Content="Dodaj" Width="100" Height="40"  Background="Green" BorderBrush="Green" Foreground="White" FontWeight="Bold"></Button>
+        <Button x:Name="WczytajBTN" Click="WczytajBTN_Click" Width="100" Height="100" Content="Wczytaj plik" BorderBrush="Black" Background="White" Foreground="Black" FontWeight="Bold"></Button>
+        <Label x:Name="wczytajTxt" HorizontalAlignment="Center" Content="Wczytano plik: NIE"></Label>
+        <Button x:Name="DodajBTN" Click="DodajBTN_Click" Content="Dodaj" Width="100" Height="40"  Background="Green" BorderBrush="Green" Foreground="White" FontWeight="Bold"></Button>
     </StackPanel>
 </Window>
