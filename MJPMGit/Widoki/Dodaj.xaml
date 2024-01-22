@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MJPMGit.Widoki"
         mc:Ignorable="d"
-        Title="Dodaj" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Dodaj" Height="300" Width="250" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <StackPanel>
+        <Label Content="Podaj nazwe:"></Label>
+        <TextBox Width="200" x:Name="nazwa"></TextBox>
+        <Label Content="Podaj opis:"></Label>
+        <TextBox Width="200" x:Name="opis"></TextBox>
+        <Label></Label>
+        <Button Width="100" Height="100" Content="Wczytaj plik" BorderBrush="Black" Background="White" Foreground="Black" FontWeight="Bold"></Button>
+        <Label HorizontalAlignment="Center" Content="Wczytano plik: NIE"></Label>
+        <Button Content="Dodaj" Width="100" Height="40"  Background="Green" BorderBrush="Green" Foreground="White" FontWeight="Bold"></Button>
+    </StackPanel>
 </Window>
